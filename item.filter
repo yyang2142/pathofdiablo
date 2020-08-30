@@ -1,0 +1,77 @@
+
+// 地图等级表示
+ItemDisplay[ma1]: %NAME% (T1) // 冰冻地窟
+ItemDisplay[ma2]: %NAME% (T3) // 遗忘沙漠
+ItemDisplay[ma3]: %NAME% //
+ItemDisplay[ma4]: %NAME% (T2) // 亵渎神殿
+ItemDisplay[ma5]: %NAME% (T1) // 冰冻高原
+ItemDisplay[ma6]: %NAME% //
+ItemDisplay[ma7]: %NAME% (T3) // 燃尽森林
+ItemDisplay[ma8]: %NAME% (T2) // 尘封古墓
+ItemDisplay[ma9]: %NAME% //
+ItemDisplay[ma10]: %NAME% //
+ItemDisplay[maz]: %NAME% //地獄審判
+
+// 显示无形
+ItemDisplay[ETH SOCK=0]: %NAME% (Eth)
+ItemDisplay[ETH SOCK=0]: %NAME% (Eth)
+
+// 显示凹槽数
+ItemDisplay[!ETH SOCK>0]: %NAME% (%SOCKETS%)
+ItemDisplay[!ETH SOCK>0]: %NAME% (%SOCKETS%)
+ItemDisplay[ETH SOCK>0]: %NAME% (ETH) (%SOCKETS%)
+ItemDisplay[ETH SOCK>0]: %NAME% (ETH) (%SOCKETS%)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 宝石染色
+ItemDisplay[(gcv OR gcy OR gcb OR gcg OR gcr OR gcw OR skc) CLVL>20]:	// 碎裂（20级以上屏蔽）
+ItemDisplay[(gfv OR gfy OR gfb OR gfg OR gfr OR gfw OR skf) CLVL>30]:	// 裂开（30级以上屏蔽）
+ItemDisplay[(gsv OR gsy OR gsb OR gsg OR gsr OR gsw OR sku) CLVL>40]:	// 普通（40级以上屏蔽）
+ItemDisplay[gzv OR gly OR glb OR glg OR glr OR glw OR skl]: %RED%%NAME%	// 無瑕疵（染红）
+ItemDisplay[gpv OR gpy OR gpb OR gpg OR gpr OR gpw OR skz]: %RED%%NAME%	// 完美（染红）
+
+// 珠宝染色
+// ItemDisplay[jew]: %RED%%NAME%	// 珠宝（染红）
+
+// 护身符染色
+ItemDisplay[(cm1 OR cm2 OR cm3) MAG]: %PURPLE%%NAME%	// 护身符（染紫）
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 屏蔽金币
+ItemDisplay[GOLD<100 CLVL>10]:
+ItemDisplay[GOLD<200 CLVL>20]:
+ItemDisplay[GOLD<500 CLVL>50]:
+ItemDisplay[GOLD<1000 CLVL>60]:
+ItemDisplay[GOLD<5000 CLVL>80]:
+ItemDisplay[GOLD<10000 CLVL>90]:
+
+// 屏蔽药水
+ItemDisplay[(hp1 OR mp1) CLVL>20]:	// 轻微（20级以上屏蔽）
+ItemDisplay[(hp2 OR mp2) CLVL>30]:	// 轻型（30级以上屏蔽）
+ItemDisplay[(hp3 OR mp3) CLVL>40]:	// 普通（40级以上屏蔽）
+ItemDisplay[(hp4 OR mp4) CLVL>60]:	// 强力（60级以上屏蔽）
+ItemDisplay[(vps OR wms) CLVL>10]:	// 耐力、融解（10级以上屏蔽）
+ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>10]:	// 投掷药剂（10级以上屏蔽）
+
+// 屏蔽钥匙、卷轴
+ItemDisplay[key CLVL>60]:			// 钥匙（60级以上屏蔽）
+ItemDisplay[(tsc OR isc) CLVL>60]:	// 卷轴（60级以上屏蔽）
+
+// 屏蔽粗糙
+ItemDisplay[NMAG INF !RW CLVL>3]:	// 劣质、粗糙等
+ItemDisplay[NMAG (EQ4 OR EQ5 OR EQ6) CLVL>60]:				// 白色手套、鞋子、腰帶
+ItemDisplay[NMAG (WP4 OR WP5 OR WP6 OR WP11) CLVL>60]:		// 白色匕首、投擲武器、十字弓、長杖
+
+ItemDisplay[(aq2 OR cq2) MAG CLVL>60]:						// 箭矢、十字弓弹藍裝
+ItemDisplay[(WEAPON OR ARMOR) !EQ7 NORM MAG CLVL>60]:		// 藍裝（除头饰外）
+ItemDisplay[(WEAPON OR ARMOR) !EQ7 MAG CLVL>60]:			// 所有藍裝（除头饰外）
+
+ItemDisplay[NMAG SOCK=1]:			// 一孔底材
+ItemDisplay[(WEAPON OR ARMOR) NORM NMAG !RW CLVL>60]:		// 普通白裝
+ItemDisplay[(WEAPON OR ARMOR) EXC NMAG !RW !xtp CLVL>60]:	// 扩展白裝（除法铠外）
+
+//ItemDisplay[(WEAPON OR ARMOR) NORM NMAG !RW CLVL>60 SOCK=0]:	// 普通白裝
+//ItemDisplay[(WEAPON OR ARMOR) EXC NMAG !RW CLVL>60 SOCK=0]:	// 0孔扩展白裝
+//ItemDisplay[(WEAPON OR ARMOR) ELT NMAG !RW CLVL>80]:			// 80等後刪除菁英白裝
